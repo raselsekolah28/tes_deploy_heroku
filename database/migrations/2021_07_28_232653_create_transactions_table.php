@@ -16,7 +16,7 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->integer("customer_id")->length(11);
-            $table->date("date")->default(date("d-m-y"));
+            $table->date("date")->default(date("Y/m/d"));
             $table->string("code_transaction", 14);
             $table->timestamps();
         });
